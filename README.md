@@ -1,3 +1,15 @@
+# What's included 
+
+- Using hooks
+- Using Context API's
+
+
+# The Plan
+
+- Have a global state global, global context and pass everything down to the components
+- Put all the ransactions in the global state and pass it down to the compnents and do all teh calculation stuff in the components
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
