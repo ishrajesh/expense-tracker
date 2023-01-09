@@ -3,8 +3,21 @@
 
 
 export default (state, action) => { 
-    switch(action){
-        default: return state;
+    // here we recieve the dispatched action
+    // console.log("state object")
+    // console.log(state)
+    // console.log("action object")
+    // console.log(action)
+    switch(action.type){
+        case "DELETE_TRANSACTION" :
+            // console.log('case: DELETE_TRANSACTION')
+            return {
+                ...state,
+                transactions: state.transactions.filter(transaction => transaction.id !== action.payload)
+            }
+        default: 
+            // console.log('switch called')
+            return state;
     }
  }
 

@@ -9,7 +9,7 @@ const TransactionList = () => {
         <h3>History</h3>
         <ul className="list" id="list">
           {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction}/>)  )}
-
+  
         </ul>
 
     </>

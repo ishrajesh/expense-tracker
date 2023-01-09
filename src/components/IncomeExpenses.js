@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 const IncomeExpenses = () => {
-   const testing = useContext(GlobalContext)
-   console.log(testing)
    const {transactions} = useContext(GlobalContext)
    const amounts = transactions.map(transaction => transaction.amount)
    const income = amounts.filter(item => item>0).reduce((total,item) => total+=item, 0).toFixed(2);
