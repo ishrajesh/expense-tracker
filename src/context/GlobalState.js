@@ -26,10 +26,20 @@ export const GlobalProvider =  ({ children }) => {
         })
     }
 
+    
+    function addTransaction(transaction){
+        // dispatch : here we are dispatching actions
+        // console.log("addTransaction function call")
+        dispatch({
+            type: "ADD_TRANSACTION",
+            payload:transaction,
+        })
+    }
 
     return(<GlobalContext.Provider value={{
         transactions: state.transactions,
-        deleteTransaction
+        deleteTransaction,
+        addTransaction
     }}>
             {children}
         </GlobalContext.Provider>
